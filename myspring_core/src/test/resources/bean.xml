@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="dd">
+
+    <bean id="examplea" class="cn.myspring.applicationcontext.sample.ExampleA"
+          init-method="init"
+          destroy-method="destroy">
+    </bean>
+</beans>
+

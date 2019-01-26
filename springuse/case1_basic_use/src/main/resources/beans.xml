@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="customerDao" class="cn.mypro.annotation_createtype.dao.impl.CustomerDaoImpl"></bean>
+
+    <bean id="customerService" class="cn.mypro.service.impl.CustomerServiceImpl">
+        <property name="customerDao" ref="customerDao"></property>
+    </bean>
+
+    <bean id="customerController" class="cn.mypro.annotation_createtype.controller.CustomerController">
+        <property name="customerService" ref="customerService"></property>
+    </bean>
+
+
+</beans>
